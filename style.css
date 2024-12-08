@@ -1,0 +1,147 @@
+/* Importing Mahaputra font */
+@import url('https://fonts.googleapis.com/css2?family=Mahaputra&display=swap');
+
+/* General body styling */
+body {
+  font-family: 'Mahaputra', serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #FFDAB9, #542f1e); /* Peach to Brown gradient */
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-attachment: fixed; /* Adds parallax effect to the background */
+}
+
+/* Quiz container styling */
+.quiz-container {
+  background-color: #fff;
+  border-radius: 25px;
+  padding: 40px;
+  max-width: 900px;
+  width: 90%;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  border: 3px solid #5a2c15; /* Brown border */
+  backdrop-filter: blur(10px); /* Slight blur behind the container */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Title styling */
+.quiz-container h1 {
+  font-size: 40px;
+  margin-bottom: 30px;
+  color: #5a2c15; /* Brown title */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  font-weight: bold;
+  letter-spacing: 2px;
+  padding-bottom: 5px;
+  border-bottom: 3px solid #542f1e; /* Line below the title */
+}
+
+/* Question section styling */
+.question {
+  margin-bottom: 25px;
+  text-align: left;
+}
+
+/* Question title styling */
+.question h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #542f1e;
+  text-transform: capitalize;
+}
+
+/* Options container for 4 columns */
+.options {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Create 3 columns */
+  gap: 15px; /* Space between options */
+  text-align: left;
+  margin-top: 15px;
+}
+
+/* Option label styling */
+.question label {
+  font-size: 18px;
+  background-color: #FFDAB9; /* Soft peach background */
+  color: #444;
+  padding: 12px 15px;
+  border-radius: 10px;
+  border: 2px solid #542f1e; /* Brown border */
+  cursor: pointer;
+  transition: all 0.3s ease, transform 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.question label:hover {
+  background-color: #542f1e; /* Tomato background on hover */
+  color: #fff; /* White text on hover */
+  transform: scale(1.05); /* Slightly enlarges */
+}
+
+.question label input {
+  margin-right: 10px;
+}
+
+/* Submit button styling */
+.submit-container {
+  margin-top: 30px;
+}
+
+button#submitQuiz {
+  background-color: #5a2c15; /* Brown button */
+  color: #fff;
+  font-size: 20px;
+  padding: 14px 30px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+}
+
+button#submitQuiz:hover {
+  background-color: #8B4513; /* Darker brown on hover */
+  transform: scale(1.1); /* Slight enlargement */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Result section styling */
+.result {
+  margin-top: 30px;
+  font-size: 28px;
+  color: #5a2c15; /* Brown text */
+  font-weight: bold;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+  display: none; /* Hidden by default until the result is displayed */
+  border-radius: 10px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 1s ease-in-out; /* Animation for smooth display */
+}
+
+/* Animation for result display */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Footer styling (optional) */
+.footer {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #666;
+}
